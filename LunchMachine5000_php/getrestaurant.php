@@ -15,7 +15,7 @@
                                 echo "<tbody>";
                                 while($row = mysqli_fetch_array($result)){
                                     echo "<tr>";;
-                                        echo "<td>" . $row['name'] . "</td>";
+                                        echo "<td><a href=". $row['website'] .">". $row['name'] ."</a></td>";
                                     echo "</tr>";
                                 }
                                 echo "</tbody>";                            
