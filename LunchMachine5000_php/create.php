@@ -101,6 +101,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         </div>
                         <div class="form-group <?php echo (!empty($website_err)) ? 'has-error' : ''; ?>">
                             <label>Website</label>
+                            <p>Address should be in format <b>http://</b>www.restaurant.fi<br>Remember http:// and don't use slash at the end</p>
                             <input type="text" name="website" class="form-control" value="<?php echo $website; ?>">
                             <span class="help-block"><?php echo $website_err;?></span>
                         </div>

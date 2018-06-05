@@ -37,7 +37,7 @@
                     </div>
                         <script src="//ajax.googleapis.com/ajax/libs/
                             jquery/1.8.1/jquery.min.js">
-                            </script>
+                        </script>
                             <body>
                             <script>
                                $(document).ready(function() {
@@ -49,11 +49,10 @@
                                });
                             </script>
                             <br>
-                            <div id="display" ></div>
+                            <div class="text-center" id="display" ></div>
                             <div class="text-center">
                                 <input type="button" class="btn btn-lg btn-danger" id="getrestaurant" value="Pick a restaurant">
-                            </div>
-                      
+                            </div> 
                 </div>
             </div>        
         </div>
