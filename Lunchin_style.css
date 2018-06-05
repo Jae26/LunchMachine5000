@@ -46,10 +46,10 @@ header {
   width: 100%;
   flex-wrap: wrap;
 }
-footer{
+/*footer{
   color: #000;
   flex-wrap: wrap;
-}
+}*/
 .header-container{
   display: flex;
  /*margin: 0 auto;
@@ -99,9 +99,11 @@ footer{
 body {
   margin-bottom: 60px; /* Margin bottom by footer height 
 }*/
+
 label {
   font-family: 'kuuFont';
 }
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -131,5 +133,13 @@ fieldset, legend, label {
   color: black;
   font-family: 'kuuFont';
   margin: 10px 10px 0 5px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
+}
+
+legend {
+  overflow: hidden;
+}
+
+.rest-fields, label {
+  padding-bottom: 10px;
 }
