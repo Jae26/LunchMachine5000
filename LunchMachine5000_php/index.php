@@ -14,18 +14,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!--<style type="text/css">
+    <style type="text/css">
         .wrapper {
-            width: 650px;
-            margin: 0 auto;
+            max-width: 100%;
+            /*width: 650px;
+            margin: 0 auto;*/
         }
-        .page-header h2{
+        /*.page-header h2{
             margin-top: 0;
         }
         table tr td:last-child a{
-            margin-right: 15px;
+            margin-right: 15px;*/
         }
-    </style>-->
+    </style>
     <script type="text/javascript">
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();   
@@ -33,6 +34,7 @@
     </script>
 </head>
 <body>
+<div class="wrapper">
     <header class="header-container">
         <img class="logo" src="img/Kuulogo.png" alt="Kuuasema Logo">
         <!--<div class="logo" >
@@ -46,20 +48,12 @@
                 <a class="form-enter" href="list.php"><p>Show all restaurants</p></a> <!--"btn pull-right"-->
             </div>
         </div>  
-    </header>
-    <div class="wrapper">
+    </header>    
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12">
-                    <!--<div class="page-header clearfix">
-                        h2 class="pull-left">Restaurants</h2>
-                        <img class="navbar-brand" src="logo.png" alt="logo">
-                        <a href="create.php" class="btn btn-success pull-right">Add new restaurant</a>
-                        <a href="list.php" class="btn  pull-right">Show all restaurants</a>
-                    </div>-->
-                        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js">
-                        </script>
-                            <body>
+                <div class="col-md-12">                    
+                        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+                            <!--<body>-->
                             <script>
                                $(document).ready(function() {
                                   $("#getrestaurant").click(function(event){
@@ -70,29 +64,29 @@
                                });
                             </script>
                             <br>
-                    <div class="text-center" id="display" ></div>
+                        <div class="text-center" id="display"></div>
                     <div class="text-center">
                         <input type="button" class="btn btn-lg btn-danger" id="getrestaurant" value="Pick a restaurant">
                     </div>
                 </div>
             </div>        
-        </div>
-    </div>
-<footer class="footer">
-    <div class="container">
-        <div class="text-center">
-            <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-secondary active">
-                    <input type="radio" name="options" id="option1" autocomplete="off" checked> Visits today
-                </label>
-                    <label class="btn btn-secondary">
-                        <input type="radio" name="options" id="option2" autocomplete="off"> Visits total
+        </div>    
+    <footer class="footer">
+        <div class="container">
+            <div class="text-center">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-secondary active">
+                        <input type="radio" name="options" id="option1" autocomplete="off" checked> Visits today
                     </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="options" id="option2" autocomplete="off"> Visits total
+                        </label>
+                </div>
+                    <br>
+                    <span class="text-muted">00000000</span>
             </div>
-                <br>
-                <span class="text-muted">00000000</span>
         </div>
-    </div>
-</footer>
+    </footer>
+</div>
 </body>
 </html>

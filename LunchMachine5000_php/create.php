@@ -68,15 +68,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Restaurant Entry</title>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" type="image/x-icon" href="k-logo.png">
-    <title>Create restaurant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="k-logo.png">    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="Lunchin_style.css">
     <style type="text/css">
         .wrapper{
-            width: 500px;
+            max-width: 100%;
+            /*width: 500px;*/
             margin: 0 auto;
+            max-height: 100%;
         }
     </style>
 </head>
@@ -86,9 +89,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="row">
                 <div class="col-md-12">
                     <div class="page-header">
-                        <h2>Create restaurant</h2>
+                        <h2 >Create restaurant</h2>
                     </div>
-                    <p>Please fill this form and submit to add restaurant to the database.</p>
+                    <p id="fill-formA">Please fill this form and submit to add restaurant to the database.</p>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <div class="rest-fields <?php echo (!empty($name_err)) ? 'has-error' : ''; ?>">
                             <label>Name</label>
