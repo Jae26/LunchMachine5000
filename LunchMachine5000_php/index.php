@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" type="image/x-icon" href="k-logo.png">
-    <title>Lunch Machine</title>
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">-->
-	<link rel="stylesheet" type="text/css" href="Lunchin_style.css">
+    <title>Lunch Machine 5000</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
     <style type="text/css">
@@ -32,7 +31,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="page-header clearfix">
-                        <h2 class="pull-left">Restaurants</h2>
+                        <!--<h2 class="pull-left">Restaurants</h2>-->
+                        <img class="navbar-brand" src="logo.png" alt="logo">
                         <a href="create.php" class="btn btn-success pull-right">Add new restaurant</a>
                         <a href="list.php" class="btn  pull-right">Show all restaurants</a>
                     </div>
