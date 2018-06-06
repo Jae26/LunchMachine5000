@@ -6,15 +6,19 @@
                     $sql = "SELECT * FROM restaurants ORDER BY RAND() LIMIT 1";
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
-                            echo "<table class='table table-bordered table-striped'>";
-                                echo "<tbody>";
-                                while($row = mysqli_fetch_array($result)){
-                                    echo "<tr>";;
-                                        echo "<td><a href=". $row['website'] .">". $row['name'] ."</a></td>";
-                                    echo "</tr>";
-                                }
-                                echo "</tbody>";                            
-                            echo "</table>";
+                            while($row = mysqli_fetch_array($result)){
+                            echo "<a href=". $row['website'] .">". $row['name'] ."</a>";
+                           // echo "<table class='table table-bordered table-striped'>";
+                               // echo "<tbody>";
+                               // while($row = mysqli_fetch_array($result)){
+
+                                    //echo "<tr>";;
+                                        //echo "<td><a href=". $row['website'] .">". $row['name'] ."</a></td>";
+                                   // echo "</tr>";
+                               // }
+                              //  echo "</tbody>";                            
+                            //echo "</table>";
+                        }
                             // Free result set from the memory.
                             mysqli_free_result($result);
                         } else{
