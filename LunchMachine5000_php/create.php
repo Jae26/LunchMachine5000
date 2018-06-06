@@ -72,6 +72,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="shortcut icon" type="image/x-icon" href="k-logo.png">
     <title>Create restaurant</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="Lunchin_style.css">
     <style type="text/css">
         .wrapper{
             width: 500px;
@@ -89,17 +90,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     </div>
                     <p>Please fill this form and submit to add restaurant to the database.</p>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                        <div class="form-group <?php echo (!empty($name_err)) ? 'has-error' : ''; ?>">
+                        <div class="rest-fields <?php echo (!empty($name_err)) ? 'has-error' : ''; ?>">
                             <label>Name</label>
                             <input type="text" name="name" class="form-control" value="<?php echo $name; ?>">
                             <span class="help-block"><?php echo $name_err;?></span>
                         </div>
-                        <div class="form-group <?php echo (!empty($address_err)) ? 'has-error' : ''; ?>">
+                        <div class="rest-fields <?php echo (!empty($address_err)) ? 'has-error' : ''; ?>">
                             <label>Address</label>
                             <textarea name="address" class="form-control"><?php echo $address; ?></textarea>
                             <span class="help-block"><?php echo $address_err;?></span>
                         </div>
-                        <div class="form-group <?php echo (!empty($website_err)) ? 'has-error' : ''; ?>">
+                        <div class="rest-fields <?php echo (!empty($website_err)) ? 'has-error' : ''; ?>">
                             <label>Website</label>
                             <p>Address should be in format <b>http://</b>www.restaurant.fi<br>Remember http:// and don't use slash at the end</p>
                             <input type="text" name="website" class="form-control" value="<?php echo $website; ?>">

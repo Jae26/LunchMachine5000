@@ -71,6 +71,7 @@ header {
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
   max-width: 100%; 
+  margin: 0 auto;
 }
 
 #content-container {
@@ -88,6 +89,12 @@ header {
 
 .text-center > p {
   font-family: 'kuuFont';
+}
+
+.form-enter {
+  display: block;
+  margin:  0 auto;
+  padding-right: 10px;
 }
 
 /* Sticky footer styles
@@ -134,12 +141,47 @@ fieldset, legend, label {
   font-family: 'kuuFont';
   margin: 10px 10px 0 5px;
   padding-bottom: 10px;
+  box-sizing: border-box;
 }
 
 legend {
   overflow: hidden;
 }
+label {
+  max-width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+button {
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+/*.btn.btn-default{
+  margin-left: 5px;
+}
+
+.btn.btn-link{
+  padding: 0 auto;
+}*/
 
 .rest-fields, label {
   padding-bottom: 10px;
+}
+
+.footer-form {  
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f5f5f5;
+  max-height: 20%;
+}
+
+.footer-form .text-center-form {
+  vertical-align: center;
+  text-align: center;
+  color: black;
 }
