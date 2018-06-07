@@ -39,15 +39,7 @@
         <img class="logo" src="img/Kuulogo.png" alt="Kuuasema Logo">
         <!--<div class="logo" >
             <img src="img/Kuulogo.png" alt="Kuuasema Logo">
-        </div>-->
-        <div class="toFormContainer">
-            <div id="clicker">
-                <a class="form-enter" href="create.php"><p>Click to Enter Restaurants</p></a>
-            </div>
-            <div>
-                <a class="form-enter" href="list.php"><p>Show all restaurants</p></a> <!--"btn pull-right"-->
-            </div>
-        </div>  
+        </div>-->          
     </header>    
         <div class="container-fluid">
             <div class="row">
@@ -70,6 +62,15 @@
                     </div>
                 </div>
             </div>        
+        </div>
+
+        <div class="toFormContainer">
+            <div id="clicker">
+                <a class="form-enter" href="create.php"><p>Click to Enter Restaurants</p></a>
+            </div>
+            <div>
+                <a class="form-enter" href="list.php"><p id="show-all">Show all restaurants</p></a> <!--"btn pull-right"-->
+            </div>
         </div>    
     <footer class="footer">
         <div class="container">

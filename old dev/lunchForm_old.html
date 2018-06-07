@@ -1,0 +1,80 @@
+<!--Lunchin' Form Page-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Ravfla Picker Form</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="Lunchin_style.css">
+</head>
+<body class="lunchFormEntry">
+	<header class="header-container">
+		<a class="logo" href="Lunchin_index.html"><img src="img/Kuulogo.png" alt="Kuuasema Logo"></a>	
+</header>
+<form action="/action_page.php">
+	<!--<fieldset>
+		<legend>Please submit desired restaurants</legend>
+		<div class="rest-fields">
+			<label>Restaurant 1:<input type="text" name="restaurant"></label><br /><br />
+			<label>Restaurant 2:<input type="text" name="restaurant"></label><br /><br />
+			<label>Restaurant 3:<input type="text" name="restaurant"></label><br /><br />
+			<label>Restaurant 4:<input type="text" name="restaurant"></label><br /><br />
+			<label>Restaurant 5:<input type="text" name="restaurant"></label><br /><br />
+			<label>Restaurant 6:<input type="text" name="restaurant"></label><br /><br />
+			<label>Restaurant 7:<input type="text" name="restaurant"></label><br /><br />
+			<label>Restaurant 8:<input type="text" name="restaurant"></label><br /><br />
+			<label>Restaurant 9:<input type="text" name="restaurant"></label><br /><br />
+			<label>Restaurant 10:<input type="text" name="restaurant"></label><br /><br />
+		</div>
+	</fieldset>-->
+	<div class="wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="page-header">
+                        <h2>Create restaurant</h2>
+                    </div>
+                    <p>Please fill this form and submit to add restaurant to the database.</p>
+                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                        <div class="rest-fields <?php echo (!empty($name_err)) ? 'has-error' : ''; ?>">
+                            <label>Name</label>
+                            <input type="text" name="name" class="form-control" value="<?php echo $name; ?>">
+                            <span class="help-block"><?php echo $name_err;?></span>
+                        </div>
+                        <div class="rest-fields <?php echo (!empty($address_err)) ? 'has-error' : ''; ?>">
+                            <label>Address</label>
+                            <textarea name="address" class="form-control"><?php echo $address; ?></textarea>
+                            <span class="help-block"><?php echo $address_err;?></span>
+                        </div>
+                        <div class="rest-fields <?php echo (!empty($website_err)) ? 'has-error' : ''; ?>">
+                            <label>Website</label>
+                            <p>Address should be in format <b>http://</b>www.restaurant.fi<br>Remember http:// and don't use slash at the end</p>
+                            <input type="text" name="website" class="form-control" value="<?php echo $website; ?>">
+                            <span class="help-block"><?php echo $website_err;?></span>
+                        </div>
+                        <input type="submit" class="btn btn-primary" value="Submit">
+                        <a href="Lunchin_index.html" class="btn btn-default" id="canned">Cancel</a>
+                    </form>
+                </div>
+            </div>        
+        </div>
+    </div>	
+</form>
+<footer class="footer-form">	
+	<div class="container-form">
+		<div class="text-center-form">
+        	<div class="btn-group btn-group-toggle" data-toggle="buttons">
+        		<label class="btn btn-secondary active">
+        			<input type="radio" name="options" id="option1" autocomplete="off" checked> Visits today
+        		</label>
+        			<label class="btn btn-secondary">
+        				<input type="radio" name="options" id="option2" autocomplete="off"> Visits total
+        			</label>
+			</div>
+			    <br>
+				<span class="text-muted">00000000</span>
+    	</div>
+	</div>
+</footer>
+</body>
+</html>

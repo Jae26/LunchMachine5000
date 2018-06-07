@@ -1,0 +1,71 @@
+<!--Lunchin' HTML-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Ravfla Picker</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="Lunchin_style.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+</head>
+<body>
+<header class="header-container">
+		<div class="logo" ><img src="img/Kuulogo.png" alt="Kuuasema Logo"></div><br />
+		<div class="toFormContainer">
+			<div>
+				<a class="form-enter" href="lunchform.html"><p>Click to Enter Restaurants</p></a>
+			</div>
+		</div>	
+</header>
+	<div id="content-container">
+		<!--Button Begin-->
+		<div class="main">
+		  	 <h1 class="text-center"><p id="result"></p></h1>
+		  	 <div class="text-center">
+		     	<button onclick="choose()" id="select" class="btn btn-lg btn-danger">Pick a restaurant</button>
+
+			    <script type="text/javascript">
+			    	
+			    	function choose() 
+			    	{
+			    	idArray = new Array()
+			    	idArray [1] = "Kabuki"
+			    	idArray [2] = "Krog Madame"
+			    	idArray [3] = "Mount Everest"
+			    	idArray [4] = "Zio Pepe"
+			    	idArray [5] = "Hoku"
+			    	idArray [6] = "Eerikin pippuri"
+			    	idArray [7] = "O' Learys"
+			    	idArray [8] = "Kuwano"
+
+			    	document.getElementById("select").onclick = choose;
+			  		randomParagraph = Math.floor(Math.random()*8);
+					document.getElementById("result").innerHTML = idArray[randomParagraph + 1];
+			    	}
+			    </script>
+		    </div>
+		</div>
+	</div>
+	<!--Button end-->
+
+<footer class="footer">
+    <div class="container">
+		<div class="text-center">
+        	<div class="btn-group btn-group-toggle" data-toggle="buttons">
+        		<label class="btn btn-secondary active">
+        			<input type="radio" name="options" id="option1" autocomplete="off" checked> Visits today
+        		</label>
+        			<label class="btn btn-secondary">
+        				<input type="radio" name="options" id="option2" autocomplete="off"> Visits total
+        			</label>
+			</div>
+			    <br>
+				<span class="text-muted">00000000</span>
+    	</div>
+	</div>
+</footer>
+</body>
+</html>
