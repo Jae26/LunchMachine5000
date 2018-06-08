@@ -14,48 +14,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <style type="text/css">
-        .wrapper {
-            max-width: 100%;
-            /*width: 650px;
-            margin: 0 auto;*/
-        }
-        /*.page-header h2{
-            margin-top: 0;
-        }
-        table tr td:last-child a{
-            margin-right: 15px;*/
-        .hMenu-container {
-            display: inline-block;
-            cursor: pointer;
-            background: linear-gradient(to right, lightgrey , white);
-            border: 2px solid grey;
-        }
-        .hMenu-container > div {
-            border-radius: 15px;
-
-        }
-        .bar1, .bar2, .bar3 {
-            width: 25px;
-            height: 6px;
-            background-color: #333;
-            margin: 4px 0;
-            transition: 0.4s;
-        }
-        .change .bar1 {
-            -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-            transform: rotate(-45deg) translate(-9px, 6px);
-        }
-        .change .bar2 {opacity: 0;}
-
-        .change .bar3 {
-        -webkit-transform: rotate(45deg) translate(-8px, -8px);
-        transform: rotate(45deg) translate(-8px, -8px);
-        }
-    </style>
+    
     <script type="text/javascript">
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();
+            
             
         });
     </script>
@@ -63,45 +26,34 @@
 <body>
 <div class="wrapper">
     <header class="header-container">
-        <!--<img class="logo" src="img/Kuulogo.png" alt="Kuuasema Logo">-->
-        <!--<div class="logo" >
+        <div class="logo">
             <img src="img/Kuulogo.png" alt="Kuuasema Logo">
-        </div>--> 
-        <!--<button class="hamburger">&#9776;</button>
-        <button class="cross">&#735;</button>-->
-        <!--<div>
-            <a href="#" class="hMenu-container" onclick="myFunction(this)">
-                    <div class="nav-content">
-                        <div class="bar1"></div>
-                        <div class="bar2"></div>
-                        <div class="bar3"></div>
-                    
-                   <a class="form-enter" href="create.php"><li><p>Add</p></li></a>
-                   <a class="form-enter" href="list.php"><li><p id="show-all">Edit</p></li></a>
-                   </div>
-            </a>
-        </div>-->
-    <div class="navbar navbar-inverse kuu">
-        <div class="container-fluid">
-            <div class="navbar-brand" href="#">
-                    <img class="logo" src="img/Kuulogo.png" alt="Kuuasema Logo">
-                </div>
-            <div class="dropdown-nav-btn">                
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" id="dropbtn">         
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <div class="nav-menu-content">
-                    <a class="form-enter" href="create.php"><p>Add</p></a>
-                    <a class="form-enter" href="list.php"><p id="show-all">Edit</p></a>
-                </div>
-            </div>      
         </div>
-    </div>
-    </header>
         
-        <div class="container-fluid">
+    <!--Begin Drop Menu-->
+    <div class="containerT" onclick="myFunction(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+
+      <div id="myDropdown" class="dropdown-content hide">
+        <div id="myAdd">
+            <a class="form-enter" href="create.php">Add</a><br>
+        </div>
+            <a id="myEdit" class="form-enter" href="list.php">Edit</a>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+        function myFunction(x){
+             x.classList.toggle("change");
+             document.getElementById('myDropdown').classList.toggle("hide");
+            }
+    </script>
+    <!--End Drop Menu-->
+    </header><!--End Header-->
+        
+        <div id="container-fluidF" class="container-fluid">
             <div class="row">
                 <div class="col-md-12">                    
                         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
@@ -109,10 +61,8 @@
                                $(document).ready(function() {
                                   $("#getrestaurant").click(function(event){
                                       $.get('getrestaurant.php',function(return_data){
-                                      $("#display").html(return_data);
-                                      function myFunction(x){
-            x.classList.toggle("change");
-            }
+                                      $("#display").html(return_data); 
+                                      
                                   });
                                  });
                                });
