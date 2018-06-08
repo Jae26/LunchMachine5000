@@ -30,7 +30,8 @@ body{
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: top center;
-  font-size: 16px;  
+  font-size: 16px; 
+  font-family: 'kuuFont'; 
 }
 body p {
   color: #fff;
@@ -180,6 +181,7 @@ nav > .navbar .navbar-inverse {
 
 #display.text-center > a {
   font-size: 34px;
+  color: #fff;
 }
 
 .text-center > p {
