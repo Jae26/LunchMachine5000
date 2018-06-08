@@ -20,6 +20,7 @@ ALL STYLES STILL SUBJECT CHANGE
 html {
   width: 100%; 
   height: 100%;
+  font-family: 'kuuFont', sans-serif;
 }
 body{
   color: #fff;
@@ -27,7 +28,8 @@ body{
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: top center;  
+  background-position: top center;
+  font-size: 16px;  
 }
 body p {
   color: #fff;
@@ -47,29 +49,86 @@ header {
   flex-wrap: wrap;
 }
 
-/*.header-container{
+nav > .navbar .navbar-inverse {
+  background-color: transparent;
+}
+
+.header-container{
   display: flex;
   max-width: 100%;
  /*margin: 0 auto;  
-  flex-wrap: wrap;
-}*/
+  flex-wrap: wrap;*/
+}
 
 .logo {
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
-  box-shadow: 0 10px 5px grey;
-  margin-left: auto;
+  /*margin-left: auto;*/
   margin-right: auto;
   margin-bottom: 20px;  
   display: block;
-  max-width: 100%; 
+  max-width: 50%;
+  float: left;
 }
 
 .logo > img {
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
-  /*max-width: 100%; */
+  max-width: 100%;
   margin: 0 auto;
+  box-shadow: 0 10px 5px grey;
+
+}
+
+/************************************************ 
+            Navigation bar-menu style
+************************************************/
+
+.navbar.navbar-inverse.kuu {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar.navbar-inverse.kuu {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 2px 4px;
+}
+
+.dropdown-nav-btn {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown-nav-btn#dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0;  
+}
+
+.nav-menu-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.nav-menu-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
 }
 
 #content-container {
@@ -84,6 +143,30 @@ header {
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
 }
+
+#container-fluidF {
+  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  margin-top: 120px;
+}
+
+#getrestaurant.btn.btn-lg.btn-danger{
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  -moz-user-select: none;
+  background-image: none;
+  border: 2px solid #d43f3a;
+  font-size: 34px;
+  text-shadow: 2px 2px 0 darkgrey;
+}
+
 .text-center {
   max-width: 100%;
   position: relative;
@@ -94,6 +177,10 @@ header {
   margin-top: 0;
 }
 
+#display.text-center > a {
+  font-size: 34px;
+}
+
 .text-center > p {
   font-family: 'kuuFont';
 }
@@ -102,58 +189,139 @@ header {
   margin-top: 0;
 }
 
-.toFormContainer {
-  margin-top: 80px;
-}
-/*
-.form-enter {
-  display: block;
-  margin:  0 auto;
-  padding-right: 10px;
-  font-size: 24px;
-  /*background-color: #d43f3a;
-  margin-top: 3px;
-  text-decoration: none;
-}
-.form-enter p {
-  text-shadow: 2px 2px 0 darkred;
-  border: 2px solid darkred;
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  padding-right: 5px;
-  background-color: #d43f3a;
-  text-decoration: none;
-}*/
-
-.form-enter {
-  display: table;
-  margin:  0 auto;
-  /*text-shadow: 2px 2px 0 darkred;*/
-  border: 2px solid darkred;
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  padding: 2px;
-  background-color: #d43f3a;
+.form-control {
+  max-width: 65%;
 }
 
-.form-enter > p {
+/************
+Menu Nav
+**********/
+.containerT > a {
+  display: inline-block;
+  cursor: pointer;
+  position: static !important;;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #fff;
+  margin: 5px 3px 1px;
+  transition: 0.4s;
+  border: 1px solid darkred;
+}
+
+
+/* Rotate first bar */
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+
+/* Fade out the second bar */
+
+.change .bar2 {
+  opacity: 0;
+}
+
+
+/* Rotate last bar */
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.hide {
+  display: none;
+}
+
+/*******
+Menu Nav end
+********/
+
+.form-enter {
+  margin:  0 auto;
+  margin-right: 3px;
+  border: 1px solid darkred;
+  /*border-top-right-radius: 5px;*/
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  /*border-bottom-left-radius: 5px;*/
+  padding: 2px 5px;
+  background-color: #d43f3a;
+  position: relative;
+}
+
+.form-enter > a {
   padding: 3px;
   margin-bottom: 0;
+
 }
 
 .form-enter a:hover, a:visited, a:link, a:active {
   color: #fff;
   text-decoration: none;
+  /*box-shadow: 0 10px 5px grey;*/
+  /*border: 1px solid darkred;*/
+}
+
+.containerT.change {
+  position: relative;
+  float: right;
+}
+
+#myAdd {
+  margin-bottom: 10px;
+  /*position: absolute;*/
+}
+
+#myAdd a {
+  color: #fff;
+}
+
+#myEdit {
+  color: #fff;
+  position: absolute;
 }
 
 #canned a:hover, a:visited, a:link, a:active {
 color: #000;
 text-shadow: 2px 2px 0 darkgrey;
+font-size: 18px;
+}
+
+.btn.btn-primary {
+display: inline-block;
+padding: 6px 12px;
+margin-bottom: 0;
+/*margin-right: 5px;*/
 font-size: 24px;
+cursor: pointer;
+font-weight: normal;
+line-height: 1.42857143;
+text-align: center;
+text-decoration: none;
+white-space: nowrap;
+vertical-align: middle;
+touch-action: manipulation;
+-moz-user-select: none;
+background-image: none;
+outline: none;
+/*border: 1px solid transparent;*/
+border: none;
+border-radius: 15px;
+box-shadow: 0 5px #999;
+}
+
+#myCancel{
+  padding: 3px 5px;
 }
 
 #clicker {
@@ -228,10 +396,6 @@ label {
   box-shadow: 0 10px 5px grey;
   margin: auto;
   margin-bottom: 15px; 
-  /*margin-left: auto;
-  margin-right: auto;   
-  display: block;
-  max-width: 100%;*/ 
 }
 
 .page-header h2 {
@@ -267,6 +431,8 @@ button {
   color: black;
 }
 
-/************************************************ 
-            Restaurant List page CSS
-************************************************/
+#cautionF {
+border-bottom: 2px solid red;
+text-decoration: none;
+/*text-shadow: none;*/
+}

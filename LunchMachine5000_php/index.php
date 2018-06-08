@@ -14,43 +14,55 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <style type="text/css">
-        .wrapper {
-            max-width: 100%;
-            /*width: 650px;
-            margin: 0 auto;*/
-        }
-        /*.page-header h2{
-            margin-top: 0;
-        }
-        table tr td:last-child a{
-            margin-right: 15px;*/
-        }
-    </style>
+    
     <script type="text/javascript">
         $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();   
+            $('[data-toggle="tooltip"]').tooltip();
+            
+            
         });
     </script>
 </head>
 <body>
 <div class="wrapper">
     <header class="header-container">
-        <img class="logo" src="img/Kuulogo.png" alt="Kuuasema Logo">
-        <!--<div class="logo" >
+        <div class="logo">
             <img src="img/Kuulogo.png" alt="Kuuasema Logo">
-        </div>-->          
-    </header>    
-        <div class="container-fluid">
+        </div>
+        
+    <!--Begin Drop Menu-->
+    <div class="containerT" onclick="myFunction(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+
+      <div id="myDropdown" class="dropdown-content hide">
+        <div id="myAdd">
+            <a class="form-enter" href="create.php">Add</a><br>
+        </div>
+            <a id="myEdit" class="form-enter" href="list.php">Edit</a>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+        function myFunction(x){
+             x.classList.toggle("change");
+             document.getElementById('myDropdown').classList.toggle("hide");
+            }
+    </script>
+    <!--End Drop Menu-->
+    </header><!--End Header-->
+        
+        <div id="container-fluidF" class="container-fluid">
             <div class="row">
                 <div class="col-md-12">                    
                         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-                            <!--<body>-->
                             <script>
                                $(document).ready(function() {
                                   $("#getrestaurant").click(function(event){
                                       $.get('getrestaurant.php',function(return_data){
-                                      $("#display").html(return_data);
+                                      $("#display").html(return_data); 
+                                      
                                   });
                                  });
                                });
@@ -62,16 +74,7 @@
                     </div>
                 </div>
             </div>        
-        </div>
-
-        <div class="toFormContainer">
-            <div id="clicker">
-                <a class="form-enter" href="create.php"><p>Click to Enter Restaurants</p></a>
-            </div>
-            <div>
-                <a class="form-enter" href="list.php"><p id="show-all">Show all restaurants</p></a> <!--"btn pull-right"-->
-            </div>
-        </div>    
+        </div>            
     <footer class="footer">
         <div class="container">
             <div class="text-center">
