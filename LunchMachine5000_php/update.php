@@ -3,8 +3,8 @@
 require_once '../config.php';
  
 // Define variables and initialize with empty values
-$name = $address = $website = "";
-$name_err = $address_err = $website_err = "";
+$name = $website = "";
+$name_err = $website_err = "";
  
 // Processing form data when form is submitted
 if(isset($_POST["id"]) && !empty($_POST["id"])){
@@ -21,13 +21,6 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
         $name = $input_name;
     }
     
-    // Validate address address
-    $input_address = trim($_POST["address"]);
-    if(empty($input_address)){
-        $address_err = 'Please enter an address.';     
-    } else{
-        $address = $input_address;
-    }
     
     // Validate website
     $input_website = trim($_POST["website"]);
@@ -38,17 +31,16 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
     }
     
     // Check input errors before inserting in database
-    if(empty($name_err) && empty($address_err) && empty($website_err)){
+    if(empty($name_err) && empty($website_err)){
         // Prepare an update statement
-        $sql = "UPDATE restaurants SET name=?, address=?, website=? WHERE id=?";
+        $sql = "UPDATE restaurants SET name=?, website=? WHERE id=?";
          
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "sssi", $param_name, $param_address, $param_website, $param_id);
+            mysqli_stmt_bind_param($stmt, "ssi", $param_name, $param_website, $param_id);
             
             // Set parameters
             $param_name = $name;
-            $param_address = $address;
             $param_website = $website;
             $param_id = $id;
             
@@ -93,7 +85,6 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
                     
                     // Retrieve individual field value
                     $name = $row["name"];
-                    $address = $row["address"];
                     $website = $row["website"];
                 } else{
                     // URL doesn't contain valid id. Redirect to error page
@@ -146,11 +137,6 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
                             <label>Name</label>
                             <input type="text" name="name" class="form-control" value="<?php echo $name; ?>">
                             <span class="help-block"><?php echo $name_err;?></span>
-                        </div>
-                        <div class="form-group <?php echo (!empty($address_err)) ? 'has-error' : ''; ?>">
-                            <label>Address</label>
-                            <textarea name="address" class="form-control"><?php echo $address; ?></textarea>
-                            <span class="help-block"><?php echo $address_err;?></span>
                         </div>
                         <div class="form-group <?php echo (!empty($website_err)) ? 'has-error' : ''; ?>">
                             <label>Website</label>
