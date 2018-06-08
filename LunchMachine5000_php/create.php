@@ -3,8 +3,8 @@
 require_once '../config.php';
  
 // Define variables and initialize with empty values
-$name = $address = $website = "";
-$name_err = $address_err = $website_err = "";
+$name = $website = "";
+$name_err = $website_err = "";
  
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -16,13 +16,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $name = $input_name;
     }
     
-    // Validate address
-    $input_address = trim($_POST["address"]);
-    if(empty($input_address)){
-        $address_err = 'Please enter an address.';     
-    } else{
-        $address = $input_address;
-    }
     
     // Validate website
     $input_website = trim($_POST["website"]);
@@ -33,17 +26,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     
     // Check input errors before inserting in database
-    if(empty($name_err) && empty($address_err) && empty($website_err)){
+    if(empty($name_err) && empty($website_err)){
         // Prepare an insert statement
-        $sql = "INSERT INTO restaurants (name, address, website) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO restaurants (name, website) VALUES (?, ?)";
          
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "sss", $param_name, $param_address, $param_website);
+            mysqli_stmt_bind_param($stmt, "ss", $param_name, $param_website);
             
             // Set parameters
             $param_name = $name;
-            $param_address = $address;
             $param_website = $website;
             
             // Attempt to execute the prepared statement
@@ -97,11 +89,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             <label>Name</label>
                             <input type="text" name="name" class="form-control" value="<?php echo $name; ?>">
                             <span class="help-block"><?php echo $name_err;?></span>
-                        </div>
-                        <div class="rest-fields <?php echo (!empty($address_err)) ? 'has-error' : ''; ?>">
-                            <label>Address</label>
-                            <textarea name="address" class="form-control"><?php echo $address; ?></textarea>
-                            <span class="help-block"><?php echo $address_err;?></span>
                         </div>
                         <div class="rest-fields <?php echo (!empty($website_err)) ? 'has-error' : ''; ?>">
                             <label>Website</label>
