@@ -52,29 +52,29 @@ nav > .navbar .navbar-inverse {
   background-color: transparent;
 }
 
-/*.header-container{
+.header-container{
   display: flex;
   max-width: 100%;
  /*margin: 0 auto;  
-  flex-wrap: wrap;
-}*/
+  flex-wrap: wrap;*/
+}
 
 .logo {
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
-  box-shadow: 0 10px 5px grey;
-  margin-left: auto;
+  /*margin-left: auto;*/
   margin-right: auto;
   margin-bottom: 20px;  
   display: block;
-  max-width: 50%; 
+  max-width: 50%;
 }
 
 .logo > img {
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
-  /*max-width: 100%; */
+  max-width: 100%;
   margin: 0 auto;
+  box-shadow: 0 10px 5px grey;
 }
 
 /************************************************ 
@@ -153,6 +153,7 @@ nav > .navbar .navbar-inverse {
   background-image: none;
   border: 2px solid #d43f3a;
   font-size: 34px;
+  text-shadow: 2px 2px 0 darkgrey;
 }
 
 .text-center {
@@ -184,112 +185,101 @@ nav > .navbar .navbar-inverse {
 /************
 Menu Nav
 **********/
+.containerT > a {
+  display: inline-block;
+  cursor: pointer;
+  position: static !important;;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 5px 3px;
+  transition: 0.4s;
+}
 
 
-/*.hamburger{
-  background:none;
-  position:absolute;
-  top:0;
-  right:0;
-  line-height:45px;
-  padding:5px 15px 0px 15px;
-  color:#999;
-  border:0;
-  font-size:1.4em;
-  font-weight:bold;
-  cursor:pointer;
-  outline:none;
-  z-index:10000000000000;
+/* Rotate first bar */
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
 }
-.cross{
-  background:none;
-  position:absolute;
-  top:0px;
-  right:0;
-  padding:7px 15px 0px 15px;
-  color:#999;
-  border:0;
-  font-size:3em;
-  line-height:65px;
-  font-weight:bold;
-  cursor:pointer;
-  outline:none;
-  z-index:10000000000000;
+
+
+/* Fade out the second bar */
+
+.change .bar2 {
+  opacity: 0;
 }
-.menu {
-  z-index:1000000; 
-  font-weight:bold; 
-  font-size:0.8em; width:100%; 
-  background:#f1f1f1;  
-  position:absolute; 
-  text-align:center; 
-  font-size:12px;
+
+
+/* Rotate last bar */
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
 }
-.menu ul {
-  margin: 0; 
-  padding: 0; 
-  list-style-type: none; 
-  list-style-image: none;
+
+.hide {
+  display: none;
 }
-.menu li {
-  display: block;   
-  padding:15px 0 15px 0; 
-  border-bottom:#dddddd 1px solid;
-}
-.menu li:hover {
-  display: block;    
-  background:#ffffff; 
-  padding:15px 0 15px 0; 
-  border-bottom:#dddddd 1px solid;
-}
-.menu ul li a { 
-  text-decoration:none;  
-  margin: 0px; 
-  color:#666;
-}
-.menu ul li a:hover {  
-  color: #666; 
-  text-decoration:none;
-}
-.menu a {
-  text-decoration:none; 
-  color:#666;
-}
-.menu a:hover {
-  text-decoration:none;
-  color:#666;}
 
 /*******
 Menu Nav end
 ********/
 
 .form-enter {
-  display: table;
   margin:  0 auto;
-  /*text-shadow: 2px 2px 0 darkred;*/
+  margin-right: 3px;
   border: 1px solid darkred;
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  padding: 1.5px;
+  /*border-top-right-radius: 5px;*/
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  /*border-bottom-left-radius: 5px;*/
+  padding: 2px 5px;
   background-color: #d43f3a;
+  position: relative;
 }
 
-.form-enter > p {
+.form-enter > a {
   padding: 3px;
   margin-bottom: 0;
+
 }
 
 .form-enter a:hover, a:visited, a:link, a:active {
   color: #fff;
   text-decoration: none;
+  /*box-shadow: 0 10px 5px grey;*/
+  border: 1px solid darkred;
+}
+
+#myAdd {
+  margin-bottom: 10px;
+}
+
+#myAdd a {
+  color: #fff;
+}
+
+#myEdit {
+  color: #fff;
 }
 
 #canned a:hover, a:visited, a:link, a:active {
 color: #000;
 text-shadow: 2px 2px 0 darkgrey;
 font-size: 20px;
+}
+
+#myCancel{
+  padding: 3px 5px;
 }
 
 #clicker {
