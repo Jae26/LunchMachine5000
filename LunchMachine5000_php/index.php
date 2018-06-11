@@ -26,7 +26,6 @@
 <div class="wrapper">
     <header class="header-container">
         <div class="logo">
-            <img src="img/Kuulogo.png" alt="Kuuasema Logo">
         </div>
         
     <!--Begin Drop Menu-->
@@ -57,7 +56,7 @@
 		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 		 
 		 <div id="myAdd">
-            <a class="form-enter" href="create.php">Add</a><br>
+            <a class="form-enter" href="create.php">Add</a>
 		</div>          
 			
 			<a id="myEdit" class="form-enter" href="list.php">Edit</a>
@@ -71,13 +70,11 @@
 	<script>
 		function openNav() {
 			document.getElementById("myDropdown").style.width = "35%";
-			<!--document.getElementById("container-fluidF").style.marginLeft = "250px";-->
 			document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 		}
 
 		function closeNav() {
 			document.getElementById("myDropdown").style.width = "0";
-			<!--document.getElementById("container-fluidF").style.marginLeft = "0";-->
 			document.body.style.backgroundColor = "white";
 		}
 	</script>
@@ -105,13 +102,18 @@
                         <div class="text-center" id="display"></div>
                     <div class="text-center">
                         <input type="button" class="btn btn-lg btn-danger" id="getrestaurant" value="Pick a restaurant">
-                    </div>
-					
-						
+                    </div>	
                 </div>
             </div>        
-        </div>            
-    <footer class="footer">
+        </div>  
+		
+		<div id="logoArea">
+			
+		</div>
+    <footer class="footer">			
+		<div class="logo">
+			<img src="img/Kuulogo.png" alt="Kuuasema Logo">
+		</div>			
         <div class="container">
             <div class="text-center">
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">

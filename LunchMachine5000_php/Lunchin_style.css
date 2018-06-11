@@ -66,7 +66,7 @@ nav > .navbar .navbar-inverse {
 	display: block;
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
-  /*margin-left: auto;*/
+  margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
   width: 300px;
@@ -82,7 +82,12 @@ nav > .navbar .navbar-inverse {
   max-width: 100%;
   margin: 0 auto;
   display: inline-block;
+  background-color: transparent;
+}
 
+#logoArea {
+	margin-top: 5
+	00px;
 }
 
 /************************************************ 
@@ -292,8 +297,9 @@ Menu Nav end
 }
 
 #myAdd {
-  margin-bottom: 10px;
-  position: sticky;
+  /*margin-bottom: 10px;
+  position: sticky;*/
+  padding-left: 3px;
 }
 
 #myAdd a {
@@ -365,20 +371,16 @@ label {
   width: 100%;
   height: auto; /* Set the fixed height of the footer here */
   line-height: 60px; /* Vertically center the text there */
-  background-color: #f5f5f5;
+  /*background-color: #f5f5f5;*/
 }
 
-
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
-
-/*.container {
-  width: auto;
-  max-width: 680px;
-  padding: 0 15px;
-  flex-wrap: wrap;
-}*/
+.container {
+  background-color: #f5f5f5;
+  width: 100%;
+  max-width: 100%;
+  /*padding: 0 15px;
+  flex-wrap: wrap;*/
+}
 
 
 /************************************************ 
@@ -476,7 +478,7 @@ text-decoration: none;
         Side Navigation
 **********************************/
 .dropdown-content-hide {
-	height: 75%;
+	max-height: 190px;
 	width: 0;
 	position: fixed;
 	z-index: 1;
@@ -485,8 +487,12 @@ text-decoration: none;
 	background-color: #fe0000;
 	overflow-x: hidden;
 	transition: 0.5s;
-	padding-top: 20px;
+	/*padding-top: 20px;*/
 	text-align: center;
+	border-top-left-radius:15px;
+	/*border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;*/
+  border-bottom-left-radius: 15px;
 }
 
 .dropdown-content-hide a {
@@ -507,7 +513,7 @@ text-decoration: none;
 	top: 0;
 	right: 25px;
 	font-size: 36px;
-	margin: 0 0 100px 550px;
+	margin: 0 0 0 550px;
 	/*margin-left: 550px;
 	margin-bottom: 100px;*/
 }
@@ -518,6 +524,6 @@ text-decoration: none;
 }
 
 @media screen and (max-height: 450px) {
-  .dropdown-content-hide {padding-top: 15px;}
+  .dropdown-content-hide {padding-top: 0;}
   .dropdown-content-hide a {font-size: 18px;}
 }
