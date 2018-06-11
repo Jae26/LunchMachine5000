@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <title>Rafla Picker "Lunch Machine 5000"</title>
-    <link rel="shortcut icon" type="image/x-icon" href="k-logo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="img/k-logo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
@@ -30,25 +30,60 @@
         </div>
         
     <!--Begin Drop Menu-->
-    <div class="containerT" onclick="myFunction(this)">
+	
+	
+    <div class="containerT" onclick="openNav()"> <!--onclick="myFunction(this)">-->
       <div class="bar1"></div>
       <div class="bar2"></div>
       <div class="bar3"></div>
 
-      <div id="myDropdown" class="dropdown-content hide">
+      <!--<div id="myDropdown" class="dropdown-content hide">
         <div id="myAdd">
             <a class="form-enter" href="create.php">Add</a><br>
         </div>
             <a id="myEdit" class="form-enter" href="list.php">Edit</a>
-      </div>
+      </div>-->
     </div>
 
-    <script type="text/javascript">
+    <!--<script type="text/javascript">
         function myFunction(x){
              x.classList.toggle("change");
              document.getElementById('myDropdown').classList.toggle("hide");
             }
-    </script>
+    </script>-->
+	
+	
+		<div id="myDropdown" class="dropdown-content-hide"> <!--id="mySidenav" class="sidenav">-->
+		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		 
+		 <div id="myAdd">
+            <a class="form-enter" href="create.php">Add</a><br>
+		</div>          
+			
+			<a id="myEdit" class="form-enter" href="list.php">Edit</a>
+			
+		</div>
+		
+		</div>
+		
+			<!--<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>-->
+		
+	<script>
+		function openNav() {
+			document.getElementById("myDropdown").style.width = "35%";
+			<!--document.getElementById("container-fluidF").style.marginLeft = "250px";-->
+			document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+		}
+
+		function closeNav() {
+			document.getElementById("myDropdown").style.width = "0";
+			<!--document.getElementById("container-fluidF").style.marginLeft = "0";-->
+			document.body.style.backgroundColor = "white";
+		}
+	</script>
+	
+	
+	
     <!--End Drop Menu-->
     </header><!--End Header-->
         
@@ -71,6 +106,8 @@
                     <div class="text-center">
                         <input type="button" class="btn btn-lg btn-danger" id="getrestaurant" value="Pick a restaurant">
                     </div>
+					
+						
                 </div>
             </div>        
         </div>            
