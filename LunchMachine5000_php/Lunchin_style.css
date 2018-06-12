@@ -85,9 +85,8 @@ nav > .navbar .navbar-inverse {
   background-color: transparent;
 }
 
-#logoArea {
-	margin-top: 5
-	00px;
+#logoSpace {
+	margin-right: 50%;
 }
 
 /************************************************ 
@@ -209,9 +208,18 @@ nav > .navbar .navbar-inverse {
 /************
 Menu Nav
 **********/
+.headNav {
+  width: 100%;
+  background-color: transparent;
+}
 .containerT{
   margin: 5px 5px auto;
-	margin-left: 5px;
+  margin-left: 5px;
+  /*background-color: #fe0000;*/
+  position: absolute;
+  padding: 5px 6px 6px;
+  text-align: center;
+  font-size: 1em;
 }
 
 .containerT > a {
@@ -222,6 +230,10 @@ Menu Nav
   z-index: 1;
 }
 
+#barMenu {
+  background-color: #fe0000;
+}
+
 .bar1,
 .bar2,
 .bar3 {
@@ -230,7 +242,6 @@ Menu Nav
   background-color: #fff;
   margin: 5px 3px 1px;
   transition: 0.4s;
-  /*border: 1px solid darkred;*/
 }
 
 
@@ -476,7 +487,7 @@ text-decoration: none;
 /**********************************
         Side Navigation
 **********************************/
-@media screen and (min: 600px){
+
 .dropdown-content-hide {
 	max-height: 190px;
 	width: 0;
@@ -494,7 +505,7 @@ text-decoration: none;
   border-bottom-right-radius: 15px;*/
   border-bottom-left-radius: 15px;
 }
-}
+
 .dropdown-content-hide a {
 	padding: 8px 8px 8px 32px;
 	text-decoration: none;
@@ -526,7 +537,90 @@ text-decoration: none;
 	padding: 16px;
 }
 
-@media screen and (max-height: 450px) {
-  .dropdown-content-hide {padding-top: 0;}
-  .dropdown-content-hide a {font-size: 18px;}
+
+
+
+
+/**************************************************************************************************
+Start of Mobile Styling 
+**************************************************************************************************/
+  
+@media screen and (max-width: 480px){
+  body {
+      color: #fff;
+      background-image: url(img/helsinki.png);  
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      /*background-position: top center;*/
+      background-position-x: 25%;
+      background-position-y: 25%;
+      font-size: 16px; 
+      font-family: 'kuuFont';
+    }
+
+    header {
+      margin: auto;
+      max-width: 50%;
+      flex-wrap: wrap;
+    }
+
+    #logoSpace{
+      display: hide;
+    }
+
+    .containerT{
+        background-color: #fe0000;
+        float: right;
+        padding: 1px 3px 3px;
+    }
+
+
+
+  .bar1,
+  .bar2,
+  .bar3 {
+      width: 35px;
+      height: 5px;
+      background-color: #fff;
+      margin: 5px 3px 1px;
+      transition: 0.4s;
+  }
+
+  .dropdown-content-hide {
+    padding-top: 0;
+    max-height: 190px;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #fe0000;
+    overflow-x: hidden;
+    transition: 0.5s;
+    text-align: center;
+    border-top-left-radius:15px;
+    /*border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;*/
+    border-bottom-left-radius: 15px;
+
+  }
+  .dropdown-content-hide a {
+    font-size: 18px;
+  }
+
+  #myAdd {
+      /*margin-bottom: 10px;
+      position: sticky;*/
+      padding-left: 3px;
+    }
+    
+    #myAdd a {
+      color: #fff;
+    }
+    
+    #myEdit {
+      color: #fff;
+      position: sticky;
+    }
 }

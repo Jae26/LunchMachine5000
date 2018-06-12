@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="Lunchin_style-new.css">
+    <link rel="stylesheet" type="text/css" href="Lunchin_style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -25,16 +25,20 @@
 <body>
 <div class="wrapper">
     <header class="header-container">
-        <div class="logo">
-        </div>
+       <!-- <div id="logoSpace">
+        </div>-->
         
     <!--Begin Drop Menu-->
 	
 	
+    <div class="headNav">
     <div class="containerT" onclick="openNav()"> <!--onclick="myFunction(this)">-->
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
+        <div id="barMenu">Menu</div>
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+    </div>
 
       <!--<div id="myDropdown" class="dropdown-content hide">
         <div id="myAdd">
@@ -42,7 +46,7 @@
         </div>
             <a id="myEdit" class="form-enter" href="list.php">Edit</a>
       </div>-->
-    </div>
+    
 
     <!--<script type="text/javascript">
         function myFunction(x){
