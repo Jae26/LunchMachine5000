@@ -124,7 +124,7 @@ $clickcount = mysqli_fetch_row(mysqli_query($link, "SELECT clickcounter FROM cou
         <div class="container">
             <div class="text-center">
  <div class="text-center">
-                <input type="checkbox" checked data-toggle="toggle" data-on="Total visits: <br><?php print "$count[0]"; ?>" data-off="Clicked:<br><?php print "$clickcount[0]"; ?>" data-onstyle="danger" data-offstyle="danger">
+                <input type="checkbox" checked data-toggle="toggle" data-on="Total visits: <br><?php print "$count[0]"; ?>" data-off="Clicked:<br><?php print "$clickcount[0]"; ?>" data-onstyle="default" data-offstyle="default">
             </div>
             </div>
         </div>
