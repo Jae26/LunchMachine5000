@@ -1,4 +1,9 @@
 <!--Lunchin' FrontPage HTML-->
+<?php 
+session_start();
+include 'count_total.php';
+$clickcount = mysqli_fetch_row(mysqli_query($link, "SELECT clickcounter FROM counter"));
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +18,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
     
     <script type="text/javascript">
         $(document).ready(function(){
@@ -116,16 +123,9 @@
 		</div>			
         <div class="container">
             <div class="text-center">
-                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                    <label class="btn btn-secondary active">
-                        <input type="radio" name="options" id="option1" autocomplete="off" checked> Visits today
-                    </label>
-                        <label class="btn btn-secondary">
-                            <input type="radio" name="options" id="option2" autocomplete="off"> Visits total
-                        </label>
-                </div>
-                    <br>
-                    <span class="text-muted">00000000</span>
+ <div class="text-center">
+                <input type="checkbox" checked data-toggle="toggle" data-on="Total visits: <br><?php print "$count[0]"; ?>" data-off="Clicked:<br><?php print "$clickcount[0]"; ?>" data-onstyle="danger" data-offstyle="danger">
+            </div>
             </div>
         </div>
     </footer>
