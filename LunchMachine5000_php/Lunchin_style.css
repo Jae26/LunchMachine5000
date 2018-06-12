@@ -165,7 +165,6 @@ nav > .navbar .navbar-inverse {
 #getrestaurant {
 	border: none;
 }
-
 #getrestaurant.btn.btn-lg.btn-danger{
   display: inline-block;
   margin-bottom: 0;
@@ -178,7 +177,6 @@ nav > .navbar .navbar-inverse {
   background-image: none;
   background-color: #fe0000;
   font-size: 34px;
-  /*text-shadow: 2px 2px 0 darkgrey;*/
 }
 
 .text-center {
@@ -212,6 +210,7 @@ nav > .navbar .navbar-inverse {
 Menu Nav
 **********/
 .containerT{
+  margin: 5px 5px auto;
 	margin-left: 5px;
 }
 
@@ -477,6 +476,7 @@ text-decoration: none;
 /**********************************
         Side Navigation
 **********************************/
+@media screen and (min: 600px){
 .dropdown-content-hide {
 	max-height: 190px;
 	width: 0;
@@ -494,7 +494,7 @@ text-decoration: none;
   border-bottom-right-radius: 15px;*/
   border-bottom-left-radius: 15px;
 }
-
+}
 .dropdown-content-hide a {
 	padding: 8px 8px 8px 32px;
 	text-decoration: none;
@@ -507,15 +507,18 @@ text-decoration: none;
 .dropdown-content-hide a:hover {
 	color: #f1f1f1;
 }
-
+@media screen and (min: 600px){
 .dropdown-content-hide .closebtn {
-	position: sticky;
+  position: sticky;
+  width: 0;
 	top: 0;
-	right: 25px;
+	/*right: 25px;*/
 	font-size: 36px;
-	margin: 0 0 0 550px;
+  margin: 0 0 0 550px;
+  background-color: #fe0000;
 	/*margin-left: 550px;
 	margin-bottom: 100px;*/
+}
 }
 
 #container-fluidF {
