@@ -28,10 +28,11 @@
      <!--Begin Drop Menu-->	
     <div class="headNav">
         <div class="containerT" onclick="openNav()"> <!--onclick="myFunction(this)">-->
-            <div id="barMenu">Menu</div>
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
+            <div id="barMenu">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
         </div>
     </div>
     <div id="myDropdown" class="dropdown-content-hide"> <!--id="mySidenav" class="sidenav">-->
