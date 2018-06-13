@@ -25,66 +25,40 @@
 <body>
 <div class="wrapper">
     <header class="header-container">
-       <!-- <div id="logoSpace">
-        </div>-->
-        
-    <!--Begin Drop Menu-->
-	
-	
+     <!--Begin Drop Menu-->	
     <div class="headNav">
-    <div class="containerT" onclick="openNav()"> <!--onclick="myFunction(this)">-->
-        <div id="barMenu">Menu</div>
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-    </div>
-    </div>
-
-      <!--<div id="myDropdown" class="dropdown-content hide">
-        <div id="myAdd">
-            <a class="form-enter" href="create.php">Add</a><br>
+        <div class="containerT" onclick="openNav()"> <!--onclick="myFunction(this)">-->
+            <div id="barMenu">Menu</div>
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
         </div>
-            <a id="myEdit" class="form-enter" href="list.php">Edit</a>
-      </div>-->
-    
-
-    <!--<script type="text/javascript">
-        function myFunction(x){
-             x.classList.toggle("change");
-             document.getElementById('myDropdown').classList.toggle("hide");
-            }
-    </script>-->
-	
-	
-		<div id="myDropdown" class="dropdown-content-hide"> <!--id="mySidenav" class="sidenav">-->
-		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		 
-		 <div id="myAdd">
+    </div>
+    <div id="myDropdown" class="dropdown-content-hide"> <!--id="mySidenav" class="sidenav">-->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+            <div class="bar1a"></div>
+            <div class="bar2a"></div>
+            <div class="bar3a"></div>
+        </a>
+        <!--&times;</a>-->
+        
+        <div id="myAdd">
             <a class="form-enter" href="create.php">Add</a>
-		</div>          
-			
-			<a id="myEdit" class="form-enter" href="list.php">Edit</a>
-			
-		</div>
-		
-		</div>
-		
-			<!--<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>-->
-		
+        </div>          
+            
+            <a id="myEdit" class="form-enter" href="list.php">Edit</a>
+            
+    </div>	
 	<script >
 		function openNav() {
-			document.getElementById("myDropdown").style.width = "100%";
+			document.getElementById("myDropdown").style.width = "25%";            
 		}
-
 		function closeNav() {
 			document.getElementById("myDropdown").style.width = "0";
 		}
-	</script>
-	
-	
-	
+    </script>
     <!--End Drop Menu-->
-    </header><!--End Header-->
+    </header>
         
         <div id="container-fluidF" class="container-fluid">
             <div class="row">
@@ -109,9 +83,9 @@
             </div>        
         </div>  
 		
-		<div id="logoArea">
+		<!--<div id="logoArea">
 			
-		</div>
+		</div>-->
     <footer class="footer">			
 		<div class="logo">
 			<img src="img/Kuulogo.png" alt="Kuuasema Logo">
