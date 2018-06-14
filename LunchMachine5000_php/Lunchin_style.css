@@ -567,17 +567,19 @@ Start of Mobile Styling
       display: hide;
     }
     #menu-primary{
+		display: flex;
       border: none;
       text-decoration: none;
       padding: 0;
-      margin: 0;
-    }
+		max-width: 100%;
+  }
 
 #menu-toggle-primary {
+	width: 25%;
   margin: 0 auto;
   background-color: #fe0000;
   float: right;
-  padding: 1px 3px 3px;
+  padding: 5px 0;
   border-top-left-radius:15px;
   border-bottom-left-radius: 15px;
   overflow: hidden;
@@ -595,12 +597,12 @@ Start of Mobile Styling
       width: 35px;
       height: 5px;
       background-color: #fff;
-      margin: 5px 35px auto;
+      margin: 5px 29px auto;
       transition: 0.4s;
   }
 
   .dropdown-content-hide {
-    /*padding: 2px 5px;*/
+    padding: 5px 0 5px 0;
     max-height: 190px;
     width: 0;
     position: fixed;
@@ -613,7 +615,11 @@ Start of Mobile Styling
     text-align: center;
     border-top-left-radius:15px;
     border-bottom-left-radius: 15px;
-    margin: 38px auto;
+    margin: 0;
+  }
+  
+  .dropdown-content-hide ::after {
+	  max-width: 30% !important;
   }
 
 
@@ -641,14 +647,13 @@ Start of Mobile Styling
     transition: 0.4s;
   }
     
-
-  /*#myAdd {
-      /*margin-bottom: 10px;
+#myAdd {
+      margin: 15px 0 5px auto;
       position: sticky;
       padding-left: 3px;
     }
     
-    #myAdd a {
+    /*#myAdd a {
       color: #fff;
     }*/
     

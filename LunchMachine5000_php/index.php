@@ -24,10 +24,10 @@
 </head>
 <body>
     <div id="wrapper">
-        <header id="menu-primary" class="menu">
+        <header id="menu-primary"> <!-- class="menu"-->
         <!--Begin Drop Menu-->	
             <div class="menu-container">
-                <div id="menu-toggle-primary" class="containerT" onclick="openNav()"> <!--onclick="myFunction(this)">-->
+                <div id="menu-toggle-primary" onclick="openNav()"> <!--class="containerT"  onclick="myFunction(this)">-->
                     <div id="barMenu">
                         <div class="bar1"></div>
                         <div class="bar2"></div>
@@ -60,7 +60,7 @@
             </div>
         <script >
             function openNav() {
-                document.getElementById("myDropdown").style.width = "25%";            
+                document.getElementById("myDropdown", "menu-toggle-primary").style.width = "25%";            
             }
             function closeNav() {
                 document.getElementById("myDropdown").style.width = "0";
