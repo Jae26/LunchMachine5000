@@ -56,11 +56,9 @@ nav > .navbar .navbar-inverse {
   background-color: transparent;
 }
 
-.header-container{
-  display: flex;
-  max-width: 100%;
- /*margin: 0 auto;  
-  flex-wrap: wrap;*/
+#menu-primary{
+  border: none;
+  text-decoration: none;
 }
 
 .logo {
@@ -209,11 +207,11 @@ nav > .navbar .navbar-inverse {
 /************
 Menu Nav
 **********/
-.headNav {
+.menu-container {
   width: 100%;
   background-color: transparent;
 }
-.containerT {
+#menu-toggle-primary {
   margin: 0 900px auto;
   /*margin-left: 5px;
   background-color: #fe0000;*/  
@@ -223,7 +221,7 @@ Menu Nav
   cursor: pointer;
 }
 
-.containerT > a {
+#menu-toggle-primary > a {
   display: inline-block;
   cursor: pointer;
   position: static !important;
@@ -314,13 +312,13 @@ Menu Nav end
   /*border: 1px solid darkred;*/
 }
 
-.containerT.change {
+#menu-toggle-primary.change {
   position: relative;
   float: right;
 }
 
 #myAdd {
-  margin-top: 10px;
+  margin: 15px 0 10px auto;
   /*position: sticky;
   padding-left: 3px;*/
 }
@@ -335,7 +333,7 @@ Menu Nav end
 }
 
 #canned a:hover, a:visited, a:link, a:active {
-color: #000;
+color: #fe0000;
 font-size: 18px;
 }
 
@@ -358,11 +356,17 @@ background-image: none;
 outline: none;
 border: none;
 border-radius: 15px;
-box-shadow: 0 5px #999;
+/*box-shadow: 0 5px #999;*/
+background-color: #fe0000;
+}
+
+#fullForm {
+  margin: 100px 0 0 555px;
 }
 
 #myCancel{
   padding: 3px 5px;
+  border-color: transparent;
 }
 
 #clicker {
@@ -562,8 +566,14 @@ Start of Mobile Styling
     #logoSpace{
       display: hide;
     }
+    #menu-primary{
+      border: none;
+      text-decoration: none;
+      padding: 0;
+      margin: 0;
+    }
 
-.containerT {
+#menu-toggle-primary {
   margin: 0 auto;
   background-color: #fe0000;
   float: right;
@@ -573,7 +583,11 @@ Start of Mobile Styling
   overflow: hidden;
 }
 
-
+#barMenu {
+  background-color: #fe0000 !important;
+  padding: 1px 0 3px 0;
+  /*margin: 0 auto;*/
+}
 
   .bar1a,
   .bar2a,
@@ -586,7 +600,7 @@ Start of Mobile Styling
   }
 
   .dropdown-content-hide {
-    padding: 2px 5px;
+    /*padding: 2px 5px;*/
     max-height: 190px;
     width: 0;
     position: fixed;
@@ -599,8 +613,10 @@ Start of Mobile Styling
     text-align: center;
     border-top-left-radius:15px;
     border-bottom-left-radius: 15px;
-    margin: 0 auto;
+    margin: 38px auto;
   }
+
+
   .dropdown-content-hide a {
     font-size: 18px;
   }
@@ -645,5 +661,9 @@ Start of Mobile Styling
       transition: margin-right .5s;
       padding: 16px;
       margin-top: 100px;
+    }
+
+    #fullForm {
+      margin: 0;
     }
   }
