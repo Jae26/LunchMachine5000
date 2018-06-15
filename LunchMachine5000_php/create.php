@@ -83,22 +83,24 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <div class="page-header">
                         <h2>Add restaurant</h2>
                     </div>
-                    <p id="fill-formA">Please fill this form and submit to add a restaurant to the database.</p>                 
-                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                       <div class="rest-fieldsF" class="rest-fields <?php echo (!empty($name_err)) ? 'has-error' : ''; ?>">
-                            <label>Restaurant Name</label>
-                            <input type="text" name="name" class="form-control" value="<?php echo $name; ?>">
-                            <span class="help-block"><?php echo $name_err;?></span>
-                      </div>                     
-                      <div class="rest-fieldsF" class="rest-fields <?php echo (!empty($website_err)) ? 'has-error' : ''; ?>">
-                            <label>Website</label>
-                            <p>Address should be the menu link and in format <b>http://</b>www.restaurant.fi<br>Remember http:// and <u id="cautionF"> don't use slash at the end</u></p>
-                            <input type="text" name="website" class="form-control" value="<?php echo $website; ?>">
-                            <span class="help-block"><?php echo $website_err;?></span>
-                       </div>
-                        <input type="submit" class="btn btn-primary" value="Submit">
-                        <a href="index.php" class="btn btn-default" id="myCancel">Cancel</a>
-                    </form>
+                    <div id="fullForm">
+                        <p id="fill-formA">Please fill this form and submit to add a restaurant to the database.</p>                 
+                        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                        <div class="rest-fieldsF" class="rest-fields <?php echo (!empty($name_err)) ? 'has-error' : ''; ?>">
+                                <label>Restaurant Name</label>
+                                <input type="text" name="name" class="form-control" value="<?php echo $name; ?>">
+                                <span class="help-block"><?php echo $name_err;?></span>
+                        </div>                     
+                        <div class="rest-fieldsF" class="rest-fields <?php echo (!empty($website_err)) ? 'has-error' : ''; ?>">
+                                <label>Website</label>
+                                <p>Address should be the menu link and in format <b>http://</b>www.restaurant.fi<br>Remember http:// and <u id="cautionF"> don't use slash at the end</u></p>
+                                <input type="text" name="website" class="form-control" value="<?php echo $website; ?>">
+                                <span class="help-block"><?php echo $website_err;?></span>
+                        </div>
+                            <input type="submit" class="btn btn-primary" value="Submit">
+                            <a href="index.php" class="btn btn-default" id="myCancel">Cancel</a>
+                        </form>
+                    </div>    
                 </div>
             </div>        
         </div>
